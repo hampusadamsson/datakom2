@@ -1,0 +1,970 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html data-rsevent-id="rs_726268"><!-- Foto: Tommy Westberg, Uppsala universitet / Mishoo, Dreamstime.com / Cecilia Mellberg, Uppsala universitet / Molka, Dreamstime.com / --><head>
+   <title>          
+            Computer Networks II,
+            10        c
+
+        , Studentportalen - Uppsala universitet</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   
+   
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   
+   <link rel="stylesheet" type="text/css" href="lab1info_files/jquery-ui-1.css">
+<link rel="stylesheet" type="text/css" href="lab1info_files/jquery.css">
+<link rel="stylesheet" type="text/css" href="lab1info_files/ui.css">
+<link id="main_css" rel="stylesheet" type="text/css" href="lab1info_files/uusp_style.css">
+<link id="rwd_css" rel="stylesheet" type="text/css" href="lab1info_files/uusp_style_rwd.css"> 
+<link id="print_css" rel="stylesheet" type="text/css" href="lab1info_files/print.css" media="print"><link rel="shortcut icon" href="https://studentportalen.uu.se/uusp-webapp/images/favicon.ico"><script type="text/javascript" src="lab1info_files/uuspUtils.js"></script>
+<script type="text/javascript" src="lab1info_files/ReadSpeaker_005.js"></script><link href="lab1info_files/ReadSpeaker.css" rel="stylesheet" type="text/css" id="rsmod_Styles"><script async="" src="lab1info_files/ReadSpeaker_006.js" type="text/javascript" id="req_Core"></script><script async="" src="lab1info_files/ReadSpeaker_004.js" type="text/javascript" id="req_pub_Config"></script>
+<script type="text/javascript"> window.rsConf = { general: { usePost: true } }; </script>
+<script type="text/javascript" src="lab1info_files/jquery-1.js"></script>
+<script type="text/javascript" src="lab1info_files/jquery-ui-1.js"></script>
+<script type="text/javascript" src="lab1info_files/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript">uusp = (typeof uusp === 'undefined') ? {} : uusp; uusp.jQuery = jQuery.noConflict();</script>
+<script type="text/javascript" src="lab1info_files/uusp.js"></script>
+<script type="text/javascript" src="lab1info_files/uusp_002.js"></script>
+<script type="text/javascript" src="lab1info_files/jquery.js"></script>
+<script type="text/javascript" src="lab1info_files/jquery_002.js"></script>
+<script type="text/javascript" src="lab1info_files/dataTables_002.js"></script>
+<script type="text/javascript" src="lab1info_files/dataTables.js"></script>
+<script type="text/javascript" src="lab1info_files/jquery_003.js"></script>
+
+   
+   
+ 
+<script src="lab1info_files/ReadSpeaker_003.js" type="text/javascript" id="rsmod_lib_Facade.adapter.jquery"></script><script async="" src="lab1info_files/ReadSpeaker_008.js" type="text/javascript" id="rsmod_Common_Settings"></script><script async="" src="lab1info_files/ReadSpeaker_002.js" type="text/javascript" id="rsmod_PlayerAPI"></script><script async="" src="lab1info_files/ReadSpeaker_007.js" type="text/javascript" id="rsmod_HL"></script><script async="" src="lab1info_files/ReadSpeaker.js" type="text/javascript" id="rsmod_ui"></script><style id="readspeaker_inline_styles" type="text/css"></style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+
+
+<body data-rsevent-id="rs_166058" id="body" class="tundra"><div style="display: none;" id="MathJax_Message"></div>
+	<div class="top-nav-dark">
+		<nav class="top-nav-wrap container">
+			<div class="top-nav-uu-link-wrap">
+				<a title="Uppsala universitets startsida" class="is-berling top-nav-uu-link" href="http://www.uu.se/">
+				Uppsala universitet</a>
+			</div>
+		
+		
+		<ul class="top-nav second-level clearfix">
+			<li class="first">
+				<a title="Student" href="http://www.uu.se//en/students">Students</a>
+			</li>
+			<li>
+				<a title="Alumn" href="http://www.uu.se//en/alumni">Alumni</a>
+			</li>
+			<li>
+				<a title="Bibliotek" href="http://ub.uu.se/?languageId=1">Library</a>
+			</li>
+		</ul>
+		<ul class="top-nav first-level is-uppercase clearfix">
+			<li class="first ">
+			<a title="Utbildning" href="http://www.uu.se//en/admissions">Admissions</a>
+			</li>
+			<li class="">
+			<a title="Forskning" href="http://www.uu.se//en/research">Research</a>
+			</li>
+			<li class="">
+			<a title="Samverkan" href="http://www.uu.se//en/collaboration">Collaboration</a>
+			</li>
+			<li class="">
+			<a title="Universitetet" href="http://www.uu.se//en/about-uu">The University</a>
+			</li>
+		</ul>
+		
+		</nav>
+	</div>
+	
+	<div id="allAroundWrapper">
+		<div id="xp1"></div>
+		<div id="portal-container">
+		   <div id="sizer">
+		      <div id="expander">
+		      	<div class="uu-top-stripe">
+			      	<nav class="container top-links clearfix" id="uu-top-links">
+						<div alt="" class="central-nav-icon down"></div>
+						<div alt="" class="central-nav-icon up"></div>
+					</nav>
+				</div>		
+				
+				<div class="logotyp">
+		       		<a href="http://www.uu.se/en/?languageId=1"><img src="lab1info_files/uu_logotyp.png" alt="logotyp" border="0" height="124" width="127"></a>
+		      		<span class="environment.produktion ">Student Portal </span>
+		      	</div>
+		
+		        <table id="header-container" border="0" cellpadding="0" cellspacing="0">
+		           <tbody><tr>
+		              <td id="header" class="produktion" align="center" valign="top">
+		                 <div id="navigation">
+<script type="text/javascript">
+	 jQuery(document).ready(function() {   		
+		
+		jQuery('.sub_menu').mouseover(function(){
+			jQuery(this).find('ul').show();
+		}).mouseleave(function(){
+			jQuery(this).find('ul').hide();
+	   	});
+			
+    	     
+			deleteCookie('service_message');
+	});
+</script> 	
+
+
+	<!--    <script language="JavaScript" type="text/javascript" src="/uusp-webapp/rest/dummy"></script> -->
+	<script type="text/javascript">
+	    if (typeof setKeepAlive != 'undefined') {
+	            setKeepAlive(1200, '/portal/portal/uusp/help');
+	    }
+	</script>
+
+
+<div class="inloggadName">
+	    <div class="user">
+	    	<div class="userName inline-block">You are logged on as:  Hampus Adamsson </div>
+				<div class="userImage inline-block"><img src="lab1info_files/profile-image-default.png" alt="" border="0" height="23" width="26"></div>							
+				<div class="userArrow inline-block"><img src="lab1info_files/arrow-down-white.png" border="0" height="22" width="22"></div>
+	    </div>
+</div>
+<div class="inloggadName" style="top:30px">	    
+		<div id="dialog" title="Titel" style="display:none" class="roles">
+			<div id="programs" style="display:none">					
+				<h4>Programmes</h4>
+				<div class="programSelection">
+					<div id="program">	
+					</div>
+				</div>	
+			</div>					
+			<h4>Courses - ongoing semester</h4>
+			<div class="registeredSelection">
+				<div id="registered">	
+				</div>
+			</div>				
+			<h4>Courses - previous semesters</h4>		
+			<div class="incompleteSelection">
+				<div id="incomplete">	
+				</div>
+			</div>					
+		</div>
+</div>	
+
+	<a class="logout" href="https://studentportalen.uu.se/portal/portal/uusp/student/webpage?uusp-logout=true" title="You are logged on as:">
+		<div class="logOut">Log off</div>
+	</a>	
+
+<div class="menuTabs">	
+	<ul id="tabsHeader">
+				<li class="hoverOff         menuItem_0" onmouseover="this.className='hoverOn         menuItem_0'" onmouseout="this.className='hoverOff         menuItem_0'">
+					<a href="https://studentportalen.uu.se/portal/portal/uusp/default" accesskey="s">Start</a>
+				</li>
+				<li class="hoverOff         menuItem_1" onmouseover="this.className='hoverOn         menuItem_1'" onmouseout="this.className='hoverOff         menuItem_1'" id="current">
+					<a href="https://studentportalen.uu.se/portal/portal/uusp/student?uusp.portalpage=true&amp;contextDomain=Uppdok" accesskey="u">My studies</a>
+				</li>
+				<li class="hoverOff         menuItem_2" onmouseover="this.className='hoverOn         menuItem_2'" onmouseout="this.className='hoverOff         menuItem_2'">
+					<a href="https://studentportalen.uu.se/portal/portal/uusp/calendar" accesskey="s">My schedule</a>
+				</li>
+				<li class="hoverOff         menuItem_2" onmouseover="this.className='hoverOn         menuItem_2'" onmouseout="this.className='hoverOff         menuItem_2'">
+					<a href="https://studentportalen.uu.se/portal/portal/uusp/webmail" accesskey="w">My e-mail</a>
+				</li>
+				<li class="hoverOff         menuItem_2" onmouseover="this.className='hoverOn         menuItem_2'" onmouseout="this.className='hoverOff         menuItem_2'">
+					<a href="https://studentportalen.uu.se/portal/portal/uusp/profile" accesskey="p">My profile</a>
+				</li>
+				<li class="hoverOff         menuItem_2" onmouseover="this.className='hoverOn         menuItem_2'" onmouseout="this.className='hoverOff         menuItem_2'">
+					<a href="https://studentportalen.uu.se/portal/portal/uusp/korint" accesskey="k">Korint</a>
+				</li>
+				<li class="hoverOff         menuItem_3" onmouseover="this.className='hoverOn         menuItem_3'" onmouseout="this.className='hoverOff         menuItem_3'">
+					<a href="https://studentportalen.uu.se/portal/portal/uusp/rss" accesskey="n">News</a>
+				</li>
+				<li class="hoverOff         menuItem_3" onmouseover="this.className='hoverOn         menuItem_3'" onmouseout="this.className='hoverOff         menuItem_3'">
+					<a href="https://studentportalen.uu.se/portal/portal/uusp/help" accesskey="h">Help</a>
+				</li>
+				<li class="hoverOff         menuItem_3" onmouseover="this.className='hoverOn         menuItem_3'" onmouseout="this.className='hoverOff         menuItem_3'">
+					<a href="https://studentportalen.uu.se/portal/portal/uusp/search" accesskey="s">Search</a>
+				</li>
+	
+		<!-- RWD Menu -->
+			<li class="rwd_menu">
+				<a href="#" onclick="jQuery('#submenu').toggle();"><span style="margin-right:8px">More</span><img src="lab1info_files/menu-icon12.png" alt="" border="0" height="10" width="12"></a>
+				<ul id="submenu" style="display:none">				
+			        		<li class="hoverOff         menuItem_rwd_0">
+								<a href="https://studentportalen.uu.se/portal/portal/uusp/default" accesskey="s">Start</a>
+							</li>
+			        		<li class="hoverOff         menuItem_rwd_1">
+								<a href="https://studentportalen.uu.se/portal/portal/uusp/student?uusp.portalpage=true&amp;contextDomain=Uppdok" accesskey="u">My studies</a>
+							</li>
+			        		<li class="hoverOff         menuItem_rwd_2">
+								<a href="https://studentportalen.uu.se/portal/portal/uusp/calendar" accesskey="s">My schedule</a>
+							</li>
+			        		<li class="hoverOff         menuItem_rwd_2">
+								<a href="https://studentportalen.uu.se/portal/portal/uusp/webmail" accesskey="w">My e-mail</a>
+							</li>
+			        		<li class="hoverOff         menuItem_rwd_2">
+								<a href="https://studentportalen.uu.se/portal/portal/uusp/profile" accesskey="p">My profile</a>
+							</li>
+			        		<li class="hoverOff         menuItem_rwd_2">
+								<a href="https://studentportalen.uu.se/portal/portal/uusp/korint" accesskey="k">Korint</a>
+							</li>
+			        		<li class="hoverOff         menuItem_rwd_3">
+								<a href="https://studentportalen.uu.se/portal/portal/uusp/rss" accesskey="n">News</a>
+							</li>
+			        		<li class="hoverOff         menuItem_rwd_3">
+								<a href="https://studentportalen.uu.se/portal/portal/uusp/help" accesskey="h">Help</a>
+							</li>
+			        		<li class="hoverOff         menuItem_rwd_3">
+								<a href="https://studentportalen.uu.se/portal/portal/uusp/search" accesskey="s">Search</a>
+							</li>
+				</ul>
+			</li>
+	</ul>
+</div>
+
+<div class="options">
+ 	<div class="block read">   
+   		<a title="Read aloud" class="rs_skip" accesskey="L" href="https://app.readspeaker.com/cgi-bin/rsent?customerid=4462&amp;lang=en_uk&amp;voice=Kate&amp;readid=content-container" onclick="readpage(this.href, 'xp1'); return false;">
+   			<div class="block readImg">
+   				<img alt="Read aloud" src="lab1info_files/rs_speaker.png" border="0" height="16" width="16">
+			</div>
+			<div class="block readText">
+Read aloud			</div>
+		</a>
+	</div>
+	<div class="block lang">	
+			<a href="https://studentportalen.uu.se/portal/portal/uusp/student/webpage?uusp-locale=sv" title="Svenska">
+				<div class="block langImg">
+					<img alt="Svenska" src="lab1info_files/sv_t.png" height="22" width="26">
+				</div>
+				<div class="block langText">
+					Svenska
+				</div>
+			</a>
+    </div>  
+</div>
+<div class="sigill"></div>
+<div class="anno"></div>
+
+
+<script type="text/javascript">
+	 jQuery(document).ready(function() {	 		 	
+		jQuery(".user").click(function() {			
+			var visible = jQuery("#dialog").is(':visible');
+			if (visible) {
+			 	jQuery("#dialog").toggle(300);
+				return;
+			}
+			jQuery("#registered").html("registered.loading");		
+				
+			jQuery.ajax({
+			    type: "GET",
+				url: "/uusp-webapp/auth_hitch/spring/user",
+				contentType: "application/json; charset=UTF-8",
+				cache: false,								
+				xhrFields: {
+					withCredentials: true 
+				},
+			    success: function(data){
+			    	var registered = jQuery("#registered");
+			    	var incomplete = jQuery("#incomplete");
+			    	var program = jQuery("#program");
+			   	 	
+					registered.html("");												    			    		    	
+					incomplete.html("");	
+					program.html("");		    	
+					
+					jQuery.each(data.registered , function(index, entity) {
+					   entity.semesterLabel = data.semesters[getLocale()][entity.semester];				 			   
+						if (entity.semester === data.currentSemester) {
+						   	registered.append(createEntity(entity));
+					   	} else { 				   
+					   		incomplete.append(createEntity(entity));
+					   }				  
+					});	
+					
+					if (registered.is(':empty')) {
+						registered.html("You don't have any ongoing courses this semester.");
+					}
+					if (incomplete.is(':empty')) {
+						incomplete.html("No courses were found.");	
+					}
+					
+					if (data.program.length > 0) {
+						jQuery.each(data.program , function(index, prog) {
+							prog.semesterLabel = '';
+							program.append(createEntity(prog));	
+							console.log("prog " + prog)			   			  
+						});
+						jQuery("#programs").show();						
+					}									
+					var dia = jQuery("#dialog").toggle(300);	        		        
+			    }   
+			});
+		});
+	 });
+	
+	
+	
+	
+	
+	function createEntity(entity) {	
+		var labelSv = (entity.type == 'program_orientation') ? (entity.programLabelSv + " " + entity.labelSv) : entity.labelSv;
+		var labelEn = (entity.type == 'program_orientation') ? (entity.programLabelEn + " " + entity.labelEn) : entity.labelEn;
+		var url = ((entity.type == 'program_orientation') || (entity.type == 'program')) ? '/portal/portal/uusp/student/student-program?uusp.portalpage=true&toolMode=studentUse' : '/portal/portal/uusp/student/student-course?uusp.portalpage=true&toolMode=studentUse';
+		var label = getText(labelSv, labelEn);
+		return  '<div class="entityDetail"><div class="inline-block entity_' + entity.id + ' expand" onclick="expandEntity('+ entity.id +')">'+ createArrows() +'</div>'+
+				'<div class="inline-block"><a href="' + url + '&entityId=' + entity.id + '">' + label + '</a></div><div class="inline-block extra_' + entity.id + '" style="margin-top:3px; float:right; display:none">'+ entity.semesterLabel +'</div></div><div class="toolDetail" id="entity_'+  entity.id +'" style="display:none"></div>';
+	}
+	 
+	function createTool(ta) {	
+	 	var label = getText(ta.tool.labelSv, ta.tool.labelEn);	
+		return  '<div class="toolInfo"><div class="inline-block" style="width:150px">'+ ta.tool.typeLabel +'</div>'+
+				'<div class="inline-block"><a href="/portal/portal/uusp/student/'+ta.tool.type+'?uusp.portalpage=true&toolMode=studentUse&entityId=' + ta.entity.id + '&toolAttachmentId='+ta.id+'">' + label + '</a></div></div>';
+	}
+		
+	function createArrows() {
+		return  '<img border="0" src="/uusp-webapp/themes/uusp/images/arrow_left.png">'+			
+				'<img border="0" src="/uusp-webapp/themes/uusp/images/arrow_down.png" style="display:none">';
+	}
+	
+	function expandEntity(entityId) {
+		jQuery("#entity_" + entityId ).html("");
+		
+		jQuery.ajax({
+			    type: "GET",
+				url: "/uusp-webapp/auth_hitch/spring/entity/" + entityId,
+				contentType: "application/json; charset=UTF-8",
+				cache: false,								
+				xhrFields: {
+					withCredentials: true
+				},
+			    success: function(data){
+			    	jQuery("#entity_" + entityId ).html("");			   	 				   	 	
+			    	
+			    	if (data.tas.length == 0) {
+						jQuery("#entity_" + entityId ).append("No connected tools")
+					} else {
+				    	jQuery.each(data.tas , function(index, ta) {
+				    		ta.tool.typeLabel = data.types[getLocale()][ta.tool.type];
+						   jQuery("#entity_" + entityId ).append(createTool(ta))
+						});	
+					}
+					
+					jQuery("#entity_" + entityId ).toggle(300);
+					jQuery(".entity_" + entityId  + " img, .extra_" + entityId).toggle(300);												  		        
+			    }   
+			});			
+	}
+	 
+	function getLocale() {
+		return ("en".indexOf('sv') > -1) ? 'sv' : 'en';
+	}
+	
+	function getText(sv, en) {
+		return (getLocale() == 'sv') ? sv : en;
+	}
+</script>
+
+</div>
+		                 <div id="spacer"></div>
+		              </td>
+		           </tr>
+		        </tbody></table>
+		        <div id="content-container">
+		           <div id="regionA"><div class="portlet-container"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="portlet-titlebar-left"></td><td class="portlet-titlebar-center"><div class="portlet-titlebar-decoration"><span class="portlet-titlebar-title">Menuadmin.courses.matrix.content.exams.examinationType=Tentamenstyp</span></div><div class="portlet-mode-container"><div class="portlet-mode-minimized" onclick="location.href='/portal/authsec/portal/uusp/student/webpage/StudentCourseMenuWindow?windowstate=minimized';"></div><div class="portlet-mode-maximized" onclick="location.href='/portal/authsec/portal/uusp/student/webpage/StudentCourseMenuWindow?windowstate=maximized';"></div></div></td><td class="portlet-titlebar-right"></td></tr><tr><td class="portlet-content-left"></td><td class="portlet-body"><div class="portlet-content-center">
+<div class="menu" id="menu">
+<ul>
+
+
+    
+     
+    
+    
+    
+    
+    
+    <li class="entityStart"> 
+	    
+	<div class="inline-block" style="float:right; width:50px; margin-top:3px; margin-right:6px;  " onclick="toggleRwd()">
+    	<span class="showInRwd" id="expand" style="float:right;">
+    		<a href="#"><img src="lab1info_files/menu-icon16.png" alt="show_more" title="show_more" border="0" height="16" width="16"></a>	        	       
+ 		</span>
+ 		<span class="showNotInRwd" id="compress" style="float:right;">
+    		<a href="#"><img src="lab1info_files/menu-icon16.png" alt="show_less" title="show_less" border="0" height="16" width="16"></a>	        	       
+ 		</span>			   		     
+	</div>			
+	    <a href="https://studentportalen.uu.se/portal/portal/uusp/student/student-course?uusp.portalpage=true&amp;showCourseInstanceParts=true&amp;sort=sortLabelAscending&amp;showClosedPrograms=false&amp;displayType=courseInstance&amp;adminType=Uppdok&amp;entityId=130327&amp;departmentCode=1060&amp;toolMode=studentUse&amp;mode=detailStart&amp;semester=20152" class="" style="width:100%">
+   			<img class="menuIconImg" src="lab1info_files/icon_menu_home.png" title="" border="0">
+	        Course starting page
+	    </a>    
+	          
+    </li>
+    
+	               
+
+               
+            
+            
+            <li class="showNotInRwdCompressed toggleInRwd">
+                <a href="https://studentportalen.uu.se/portal/portal/uusp/student/student-course-participants?uusp.portalpage=true&amp;returnPage=%2Fstudent%2Fstudent-course&amp;showCourseInstanceParts=true&amp;sort=sortLabelAscending&amp;showClosedPrograms=false&amp;displayType=courseInstance&amp;adminType=Uppdok&amp;entityId=130327&amp;departmentCode=1060&amp;toolMode=studentUse&amp;mode=participants&amp;semester=20152" class="">
+    				<img class="menuIconImg" src="lab1info_files/icon_menu_participants.png" title="" border="0">
+                List of participants</a>
+                
+            </li>
+
+        <li class="showNotInRwdCompressed toggleInRwd">
+            <a class="external" onclick="window.open('http://www.uu.se/en/education/master/selma/kursplan/?kpid=29762&amp;type=1','_blank');return false;" href="#">
+    			<img class="menuIconImg" src="lab1info_files/icon_menu_courseplan.png" title="" border="0">
+            Syllabus with course literature</a>
+        </li>
+
+	
+        <li class="showNotInRwdCompressed toggleInRwd">
+            <a onclick="window.open('http://www.ub.uu.se/?languageId=1','_blank');return false;" href="#" class="external">
+        			<img class="menuIconImg" src="lab1info_files/icon_menu_library.png" title="" border="0">
+            Library</a>
+        </li>
+    
+	        
+	        
+	        
+	        <li class="showNotInRwdCompressed toggleInRwd">
+	            <a href="https://studentportalen.uu.se/portal/portal/uusp/student/student-course-groups?uusp.portalpage=true&amp;showCourseInstanceParts=true&amp;sort=sortLabelAscending&amp;showClosedPrograms=false&amp;displayType=courseInstance&amp;adminType=Uppdok&amp;entityId=130327&amp;departmentCode=1060&amp;toolMode=studentUse&amp;mode=mygroups&amp;semester=20152" class="">
+	            	<img title="" src="lab1info_files/icon_menu_group-application.png" class="menuIconImg" border="0">
+	            My groups</a>
+	        </li>   	         	
+	 
+		 <div class="showNotInRwdCompressed toggleInRwd">
+	
+    <li id="item-324137" data="addClass:'    '">
+    	  <a href="https://studentportalen.uu.se/portal/portal/uusp/student/staff-list?uusp.portalpage=true&amp;entityId=130327&amp;toolAttachmentId=324137&amp;toolMode=studentUse&amp;mode=staff-list324137" class="">
+    		<span style="margin-left:0px"></span> 
+    			<img class="menuIconImg" src="lab1info_files/icon_menu_staff-list.png" title="Teacher list" border="0">
+          		<span>Teacher</span>
+          		<span></span>
+          		<span></span>
+    	</a>	
+    </li>    
+	
+    <li id="item-340415" data="addClass:'  external '">
+    	  <a href="https://se.timeedit.net/web/uu/db1/schema/ri.html?h=f&amp;sid=3&amp;p=20151026.x%2C20151220.x&amp;objects=978592.200&amp;ox=0&amp;types=0&amp;fe=0&amp;g=t&amp;clo=0%2C243299.188%2C243304.188%2C243311.188&amp;cch=200-12%2C207-68-Program%2C196-50%2C200-69-Grupp&amp;h2=f" class="">
+    		<span style="margin-left:0px"></span> 
+    			<img class="menuIconImg" src="lab1info_files/icon_menu_schedule-url.png" title="Schedule" border="0">
+          		<span>Course Schedule</span>
+          		<span></span>
+          		<span></span>
+    	</a>	
+    </li>    
+		 </div>
+</ul>
+</div>
+
+
+<div class="menu showNotInRwdCompressed toggleInRwd" id="treeMenuStud">
+	
+<ul class="dynatree-container"><li class=""><span class="dynatree-node dynatree-folder dynatree-expanded dynatree-has-children color-eeeeee flexmenu dynatree-exp-e dynatree-ico-ef"><span class="dynatree-expander"></span><span class="dynatree-icon"></span><a href="#" class="dynatree-title">General Information</a></span><ul style=""><li class=""><span class="dynatree-node      dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="https://studentportalen.uu.se/portal/portal/uusp/student/webpage?uusp.portalpage=true&amp;entityId=130327&amp;toolAttachmentId=341269&amp;toolMode=studentUse&amp;mode=webpage341269" class="dynatree-title">
+    		<span style="margin-left:0px"></span> 
+    			<img class="menuIconImg" src="lab1info_files/icon_menu_webpage.png" title="Web page" border="0">
+          		<span>Course Information</span>
+          		<span></span>
+          		<span></span>
+    	</a></span></li><li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib      dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="https://studentportalen.uu.se/portal/portal/uusp/student/filearea?uusp.portalpage=true&amp;entityId=130327&amp;toolAttachmentId=341275&amp;toolMode=studentUse&amp;mode=filearea341275" class="dynatree-title">
+    		<span style="margin-left:0px"></span> 
+    			<img class="menuIconImg" src="lab1info_files/icon_menu_filearea.png" title="File area" border="0">
+          		<span>Lecture Notes</span>
+          		<span></span>
+          		<span></span>
+    	</a></span></li></ul></li><li class=""><span class="dynatree-node dynatree-folder dynatree-expanded dynatree-has-children color-eeeeee flexmenu dynatree-exp-e dynatree-ico-ef"><span class="dynatree-expander"></span><span class="dynatree-icon"></span><a href="#" class="dynatree-title">Seminars</a></span><ul style=""><li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib      dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="https://studentportalen.uu.se/portal/portal/uusp/student/webpage?uusp.portalpage=true&amp;entityId=130327&amp;toolAttachmentId=341267&amp;toolMode=studentUse&amp;mode=webpage341267" class="dynatree-title">
+    		<span style="margin-left:0px"></span> 
+    			<img class="menuIconImg" src="lab1info_files/icon_menu_webpage.png" title="Web page" border="0">
+          		<span>Seminar Information</span>
+          		<span></span>
+          		<span></span>
+    	</a></span></li></ul></li><li class=""><span class="dynatree-node dynatree-folder dynatree-expanded dynatree-has-children color-eeeeee flexmenu dynatree-exp-e dynatree-ico-ef"><span class="dynatree-expander"></span><span class="dynatree-icon"></span><a href="#" class="dynatree-title">Labs</a></span><ul style=""><li class=""><span class="dynatree-node menuTreeCurrent     dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="https://studentportalen.uu.se/portal/portal/uusp/student/webpage?uusp.portalpage=true&amp;entityId=130327&amp;toolAttachmentId=341265&amp;toolMode=studentUse&amp;mode=webpage341265" class="dynatree-title">
+    		<span style="margin-left:0px"></span> 
+    			<img class="menuIconImg" src="lab1info_files/icon_menu_webpage.png" title="Web page" border="0">
+          		<span>Lab 1 - TFTP</span>
+          		<span></span>
+          		<span></span>
+    	</a></span></li><li class=""><span class="dynatree-node      dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="https://studentportalen.uu.se/portal/portal/uusp/student/filearea?uusp.portalpage=true&amp;entityId=130327&amp;toolAttachmentId=341257&amp;toolMode=studentUse&amp;mode=filearea341257" class="dynatree-title">
+    		<span style="margin-left:10px"></span> 
+    			<img class="menuIconImg" src="lab1info_files/icon_menu_filearea.png" title="File area" border="0">
+          		<span>Lab 1 Files</span>
+          		<span></span>
+          		<span></span>
+    	</a></span></li><li class=""><span class="dynatree-node      dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="https://studentportalen.uu.se/portal/portal/uusp/student/groups-tool?uusp.portalpage=true&amp;entityId=130327&amp;toolAttachmentId=341262&amp;toolMode=studentUse&amp;mode=group-application341262" class="dynatree-title">
+    		<span style="margin-left:10px"></span> 
+    			<img class="menuIconImg" src="lab1info_files/icon_menu_group-application.png" title="Group division" border="0">
+          		<span>Lab 1 Pairs</span>
+          		<span></span>
+          		<span></span>
+    	</a></span></li><li class=""><span class="dynatree-node      dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="https://studentportalen.uu.se/portal/portal/uusp/student/webpage?uusp.portalpage=true&amp;entityId=130327&amp;toolAttachmentId=341271&amp;toolMode=studentUse&amp;mode=webpage341271" class="dynatree-title">
+    		<span style="margin-left:10px"></span> 
+    			<img class="menuIconImg" src="lab1info_files/icon_menu_webpage.png" title="Web page" border="0">
+          		<span>Checklist Lab 1</span>
+          		<span></span>
+          		<span></span>
+    	</a></span></li><li class=""><span class="dynatree-node      dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="https://studentportalen.uu.se/portal/portal/uusp/student/assignment?uusp.portalpage=true&amp;entityId=130327&amp;toolAttachmentId=341249&amp;toolMode=studentUse&amp;mode=assignment341249" class="dynatree-title">
+    		<span style="margin-left:10px"></span> 
+    			<img class="menuIconImg" src="lab1info_files/icon_menu_assignment.png" title="Assignment" border="0">
+          		<span>Upload Lab 1 Files</span>
+          		<span></span>
+          		<span></span>
+    	</a></span></li><li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib      dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="https://studentportalen.uu.se/portal/portal/uusp/student/webpage?uusp.portalpage=true&amp;entityId=130327&amp;toolAttachmentId=341839&amp;toolMode=studentUse&amp;mode=webpage341839" class="dynatree-title">
+    		<span style="margin-left:0px"></span> 
+    			<img class="menuIconImg" src="lab1info_files/icon_menu_webpage.png" title="Web page" border="0">
+          		<span>Lab 2 - Simulation</span>
+          		<span></span>
+          		<span></span>
+    	</a></span></li></ul></li><li class=""><span class="dynatree-node dynatree-folder dynatree-expanded dynatree-has-children color-eeeeee flexmenu dynatree-exp-e dynatree-ico-ef"><span class="dynatree-expander"></span><span class="dynatree-icon"></span><a href="#" class="dynatree-title">In-Depth Project</a></span><ul style=""><li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib      dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="https://studentportalen.uu.se/portal/portal/uusp/student/webpage?uusp.portalpage=true&amp;entityId=130327&amp;toolAttachmentId=341840&amp;toolMode=studentUse&amp;mode=webpage341840" class="dynatree-title">
+    		<span style="margin-left:0px"></span> 
+    			<img class="menuIconImg" src="lab1info_files/icon_menu_webpage.png" title="Web page" border="0">
+          		<span>Project Information</span>
+          		<span></span>
+          		<span></span>
+    	</a></span></li></ul></li><li class="dynatree-lastsib"><span class="dynatree-node dynatree-folder dynatree-expanded dynatree-has-children dynatree-lastsib color-eeeeee dynatree-exp-el dynatree-ico-ef"><span class="dynatree-expander"></span><span class="dynatree-icon"></span><a href="#" class="dynatree-title">Department information</a></span><ul style=""><li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="http://www.it.uu.se/edu" class="dynatree-title">
+			                       <span class="">
+		    							<img class="menuIconImg" src="lab1info_files/icon_menu_static-url.png" title="static-url" border="0">
+			                       Education at the department for IT</span>
+			                    </a></span></li><li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="http://www.it.uu.se/edu/anmalan_reg" class="dynatree-title">
+			                       <span class="">
+		    							<img class="menuIconImg" src="lab1info_files/icon_menu_static-url.png" title="static-url" border="0">
+			                       How to apply to our courses</span>
+			                    </a></span></li><li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="https://se.timeedit.net/web/uu/db1/schema/" class="dynatree-title">
+			                       <span class="">
+		    							<img class="menuIconImg" src="lab1info_files/icon_menu_schedule-url.png" title="schedule-url" border="0">
+			                       Schedule</span>
+			                    </a></span></li><li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="https://studentportalen.uu.se/portal/portal/uusp/student/webpage?uusp.portalpage=true&amp;entityId=130327&amp;toolAttachmentId=275237&amp;toolMode=studentUse&amp;mode=webpage275237" class="dynatree-title">
+			                       <span class="">
+		    							<img class="menuIconImg" src="lab1info_files/icon_menu_webpage.png" title="webpage" border="0">
+			                       Student service at the IT dept.</span>
+			                    </a></span></li><li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-icon"></span><a href="https://studentportalen.uu.se/portal/portal/uusp/student/webpage?uusp.portalpage=true&amp;entityId=130327&amp;toolAttachmentId=225070&amp;toolMode=studentUse&amp;mode=webpage225070" class="dynatree-title">
+			                       <span class="">
+		    							<img class="menuIconImg" src="lab1info_files/icon_menu_webpage.png" title="webpage" border="0">
+			                       Web page</span>
+			                    </a></span></li></ul></li></ul></div>
+
+<script type="text/javascript">	
+function toggleRwd() {
+jQuery('.toggleInRwd').toggleClass('showNotInRwdCompressed');
+jQuery('#compress, #expand').toggleClass('showInRwd');
+jQuery('#compress, #expand').toggleClass('showNotInRwd');
+}</script>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	var treeStud = jQuery("#treeMenuStud").dynatree({      
+		persist: true,
+		clickFolderMode: true,
+		debugLevel: 1,           
+		onActivate: function(node) {
+			if (node.data.isFolder) { 
+				node.expand(true); 
+			}
+			node.deactivate();
+			if (node.data.href){           	         
+			 	 window.location.href = node.data.href;                
+			}
+			     
+		},
+		cookie: {        
+			expires: 365,
+			path: "/"
+		}
+	});
+	
+	jQuery("#menu a.menuCurrent").each(function(){  		
+	    var node = jQuery("#treeMenuStud").dynatree("getActiveNode")	    
+		if (node) {
+			node.deactivate();
+		}     
+ 	});
+ 	
+ 	jQuery("#treeMenuStud span.menuTreeCurrent").each(function(){  		
+		jQuery("#menu a.menuCurrent").toggleClass("menuCurrent", false);  
+ 	});
+ 				
+});
+</script>
+
+
+</div></td><td class="portlet-content-right"></td></tr><tr><td class="portlet-footer-left"></td><td class="portlet-footer-center"></td><td class="portlet-footer-right"></td></tr></tbody></table></div></div>
+		           <div id="regionB"><div class="portlet-container"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="portlet-titlebar-left"></td><td class="portlet-titlebar-center"><div class="portlet-titlebar-decoration"><span class="portlet-titlebar-title">Web page</span></div><div class="portlet-mode-container"><div class="portlet-mode-help" onclick="location.href='/portal/authsec/portal/uusp/student/webpage/webpage-window?mode=help';"></div><div class="portlet-mode-minimized" onclick="location.href='/portal/authsec/portal/uusp/student/webpage/webpage-window?windowstate=minimized';"></div><div class="portlet-mode-maximized" onclick="location.href='/portal/authsec/portal/uusp/student/webpage/webpage-window?windowstate=maximized';"></div></div></td><td class="portlet-titlebar-right"></td></tr><tr><td class="portlet-content-left"></td><td class="portlet-body"><div class="portlet-content-center">
+<link rel="stylesheet" type="text/css" href="lab1info_files/mediaelementplayer.css">
+<script type="text/javascript" src="lab1info_files/mediaelement-and-player.js"></script>
+<script type="text/javascript" src="lab1info_files/MathJax.js"></script>
+
+
+<script>
+	jQuery(document).ready(function() {
+		jQuery("video,audio").mediaelementplayer({
+			enablePluginDebug: false,
+			enableAutosize: true,
+			enableKeyboard: false,
+    		pauseOtherPlayers: true,
+			features: ['playpause','progress','current','duration','tracks','volume','fullscreen']
+		});
+	});
+	
+	MathJax.Hub.Config({
+		"HTML-CSS": {
+    		imageFont:	null
+  		},
+  		"MathMenu": {
+    		showLocale: false
+    	}
+  	});
+	
+</script>
+
+<style>
+	.uusp_lang_sv {
+		display: none
+	}
+</style>
+
+	
+        <h2 class="entityHeader entityHeaderCourse_instance">          
+            Computer Networks II,
+            10        c
+
+        </h2>
+            <div class="entityInfo">
+	            <span class="courseCodeLabel">Course code:</span><span class="courseCode">1DT074,</span>
+	            <span class="reportCodeLabel">Report code:</span><span class="reportCode">11222,</span> 
+	            <span class="coursePace"> 33%, DAG, NML,</span>
+	
+		                 <div>
+				                <span class="startWeekLabel">week:</span>
+				                <span class="startWeek">44 - 02</span>
+			                 <span class="semesterLabel">Semester:</span>
+			                 <span class="semester">Autumn 2015</span>
+		                 </div>
+		                 <div>
+				                <span class="startWeekLabel">week:</span>
+				                <span class="startWeek">03 - 12</span>
+			                 <span class="semesterLabel">Semester:</span>
+			                 <span class="semester">Spring 2016</span>
+		                 </div>
+            </div>
+        <hr>
+				               
+   
+    <h2 class="infoHeader">Lab 1 - TFTP</h2>
+
+	<div class="print" onclick="window.print()" title="Print"></div>
+
+<div class="webpage">
+	    <div class="message">
+This information is not available in English. Now showing the Swedish version.		</div>
+	<h1>Lab 1 TFTP - Socket programming</h1> 
+<h2>Motivation</h2> 
+<p>After completing this lab you should be able to implement and make 
+design choices regarding the basics of socket programming in the form of
+ a functioning TFTP client. It will also demonstrate the basics of 
+performance measurements.</p> 
+<p>This lab addresses the learning outcome "Design and implement 
+communicating applications". The purpose of this assignment is that you 
+get hands on experience and practice network programming, specifically 
+socket programming.</p> 
+<h2>Instructions</h2> 
+<p>This assignment needs to be performed in groups of two. You are 
+encouraged to use the provided resources and to discuss with other 
+groups. However, you are not allowed to use code from other groups doing
+ the assignment. If you discuss with another group, please state so in 
+the upload area (as a comment) to give them credit and avoid suspicion 
+of cheating.</p> 
+<p>There are two lab sessions (non-mandatory) dedicated to this lab, we 
+highly recommend that you come prepared, make use of them as much as 
+possible and ask questions. Expect that you will need to work on this 
+assignment outside of the scheduled lab hours. At the third session, you
+ will have to present your results.</p> 
+<p>The assignment is made in an open way with no step-by-step 
+instructions. You should be able to take in all the necessary 
+information to plan and design your work and solution. Below follows 
+information that is essential in completing this lab.</p> 
+<p>This lab involves writing a TFTP client in C or Python and doing some
+ simple measurements. TFTP stands for Trivial File Transfer Protocol and
+ is the predecessor to FTP. It is still used today for transferring new 
+firmware to routers and other embedded devices and also for booting 
+network terminals. It is a simple protocol and therefore straightforward
+ to understand. It has two main uses:</p> 
+<ol> 
+ <li> Transferring a file from a client to server.</li> 
+ <li> Transferring a file from a server to a client.</li> 
+</ol> 
+<p>Your task will be to write code for a client (you do not have to 
+implement a server) that can perform both of these functions. In other 
+words, you need to write code that can PUT a file from your client onto a
+ server and GET a file from a server to your client.</p> 
+<p>The first step in this excercise is to read <a href="http://www.ietf.org/rfc/rfc1350.txt">RFC1350</a>
+ which is the document that details the TFTP standard. The RFC document 
+contains all the information you need about how TFTP works, so it is 
+essential that you read and understand it before starting to program. 
+You may also want to read up on socket programming, e.g., using this <a href="http://beej.us/guide/bgnet/output/html/singlepage/bgnet.html">intro</a>.</p> 
+<h2>Detailed Instructions</h2> 
+<p>You can select between doing this exercise in C or Python. In either 
+case, you need to base your software on the socket interface. Start by 
+downloading the appropriate code skeleton and language-dependent 
+instruction files:</p> 
+<ul> 
+ <li>C-language files (tftp_c.tar.gz)</li> 
+ <li>Python files (tftp_python.tar.gz)</li> 
+</ul> 
+<p>You find them in the file area <em>Lab 1 Files</em>.</p> 
+<p>Then make your software code.</p> 
+<h2>Testing your Software</h2> 
+<p>One of the major tasks in this assignment is actually testing and 
+debugging your code. You are encouraged to also work outside scheduled 
+time. However, we recommend you to do your testing on the schools UNIX 
+system since it is there you have to demonstrate your code. You can 
+login remotely using ssh (ask a TA or a friend if you do not know how).</p> 
+<p>We strongly advise against testing your code when connected to a 
+wireless network since packet loss can be severe, making it difficult to
+ debug.</p> 
+<p>For testing, there is a TFTP server running on the machine <code>rabbit.it.uu.se</code>
+ which is accessible both inside and outside the university network. You
+ can access it using different port numbers to test different behavior. 
+The following ports are open:</p> 
+<ul> 
+ <li>69 - The standard port, reserved for TFTP. Only accessible inside the university network.</li> 
+ <li>6969 - Same as 69 but accessible outside the university network as well.</li> 
+ <li>10069 - Generates packet loss, you need to send a large enough file
+ to get some packet loss. (Accessible both inside and outside the 
+university network)</li> 
+ <li>20069 - Generates duplicates, you need to send a large enough file 
+to get duplicates. (Accessible both inside and outside the university 
+network)</li> 
+</ul> 
+<p>If you wish to retrieve a file, there are three test files available on the server: <code>small.txt</code>, <code>medium.pdf</code>, <code>large.jpeg</code>.
+ If you wish to upload something feel free. However, do not upload 
+objectionable material as all TFTP traffic is logged and offenders will 
+be reported.</p> 
+<p>The first thing to check when completing a transfer is that the file 
+size of the original and the transferred file are exactly the same. Then
+ verify that the md5 of your transferred file is the same as the 
+original. If two files have the same md5 they are exactly the same. The 
+Unix command is <code>md5sum</code>. Both the md5 and file sizes of the files are listed in the table below.</p> 
+<table style="width:500px" align="left" border="1" cellpadding="1" cellspacing="1"> 
+ <thead> 
+  <tr> 
+   <th scope="col">File Name</th> 
+   <th scope="col">File Size</th> 
+   <th scope="col">md5</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><code>small.txt</code></td> 
+   <td>1 931 bytes</td> 
+   <td><code>667ff61c0d573502e482efa85b468f1f</code></td> 
+  </tr> 
+  <tr> 
+   <td><code>medium.pdf</code></td> 
+   <td>17 577 bytes</td> 
+   <td><code>ee98d0524433e2ca4c0c1e05685171a7</code></td> 
+  </tr> 
+  <tr> 
+   <td><code>large.jpeg</code></td> 
+   <td>82 142 bytes</td> 
+   <td><code>f5b558fe29913cc599161bafe0c08ccf</code></td> 
+  </tr> 
+ </tbody> 
+</table> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p><a href="https://www.wireshark.org/" target="_blank"><strong>Wireshark</strong></a>&nbsp;network
+ protocol analyzer (or other such programs) is a very good way to debug 
+your code and especially that you format the packets correctly. However,
+ due to privacy and user policy issues it is not available on the school
+ <code>Linux</code> systems, so if you want to use it you need to 
+download it to your own laptop. Run Wireshark and capture traffic while 
+running your tftp client. Select a captured UDP packet and right-click 
+and choose "Decode as" then select TFTP. That way you can see how every 
+packet you send out "actually" looks on the network as well as read the 
+TFTP related info. If Wireshark reports "malformed packet" for the 
+packets that you have sent out, then you are doing something wrong. 
+Often it is a case of a trailing zero. Remember, try and avoid a 
+wireless connection when doing this.</p> 
+<p>A text-based alternative to Wireshark is <code>tcpdump</code>.</p> 
+<h2>Do Some Performance Measurements</h2> 
+<p>Now when your client is ready, you need to perform some small 
+measurements. The target should be to analyze the time it takes from the
+ download to completion (e.g., measure the response time) for various 
+scenarios. To measure the time, you can use the built in command <code>time</code> as follows:</p> 
+<p>all three files and the three ports (69, 10069, 20069) and analyze the differences.</p> 
+<pre>   bash$ time ./tftp-mysolution -g small.txt joshua.it.uu.se
+
+   real    0m0.324s
+   user    0m0.004s
+   sys    0m0.044s</pre> 
+<p>Collect the real time from about 10 repetitions (or more if needed). 
+Calculate the mean and the confidence intervals. See if you can draw any
+ conclusions from these measurements.</p> 
+<p>Exactly which scenarios you want to measure is up to you, but you can
+ experiment with the three filesizes, upload/download, differences 
+between the amount of packet loss (by choosing the different ports). 
+Running the clients from the university computers, from home, or over 
+wireless. Etc. You need to run a couple of scenarios and make some 
+comparisons between them.</p> 
+<p>You should produce a table or graph with the result and one paragraph
+ of text explaining it and arguing for your conclusions. This report 
+should be shown at the demonstration.</p> 
+<p><strong>Note</strong> that your first run will take longer time to 
+complete. This is likely to be due to DNS lookups and loading of the 
+code into memory, etc. Discard such trails.</p> 
+<h2>Presentation of Solution</h2> 
+<p>You should upload all the required software files to run your TFTP 
+client in the Upload Lab 1 Files assigment area found here in the left 
+column just below this entry. Make sure you first go through the check 
+list before uploading to make sure you have solved everything.</p> 
+<p>You, together with your lab partner, will have to orally present your
+ solution to a teacher (assistant), demonstrate its working, and show 
+the results of your measurements campaign during about 15 minutes. This 
+will be done in a UNIX lab room. You should be prepared to explain all 
+your code.</p> 
+<p>Make sure both of you have access to the code in case your lab 
+partner does not show up. Also make sure you prepare the demonstration 
+before your time slot begins.</p> 
+<h2>Passing Criteria</h2> 
+<p>To pass this lab, your program must compile without errors and 
+warnings, not crash under any circumstances, handle all error 
+situations, and otherwise follow the TFTP protocol standard. It must 
+implement both PUT and GET of files and also deal with lost and 
+duplicate packets (i.e., port 10069 and 20069 on the server).</p> 
+<p>You (both of you) must be able to explain how the code works. The 
+code must be based on the provided code-skeleton. You should be able to 
+show some measurement based on your code from several scenarios and draw
+ some conclusions from this.</p> 
+<h2>Deadline</h2> 
+<p>You need to hand in the finished source code on <strong>Wednesday 11 November 23:59</strong>.</p> 
+<p>Presentation of the program and measurements will take place on <strong>Monday 16 November 8:15-10:00</strong> in P2507. Time schedule for when you should demonstrate your solution will appear later.</p> 
+<h2>References</h2> 
+<ul> 
+ <li><a href="http://www.ietf.org/rfc/rfc1350.txt" target="_blank">RFC 1350</a></li> 
+ <li><a href="http://beej.us/guide/bgnet/output/html/singlepage/bgnet.html" target="_blank">Beej's Guide to Network Programming - Using Internet Sockets</a></li> 
+ <li><a href="https://www.python.org/doc/" target="_blank">Python main documentation</a></li> 
+ <li>Python <a href="https://docs.python.org/2/library/socket.html" target="_blank">socket</a>, <a href="https://docs.python.org/2/library/select.html" target="_blank">select</a>, and <a href="https://docs.python.org/2/library/struct.html" target="_blank">struct</a> documentation</li> 
+ <li><a href="http://www.codecademy.com/tracks/python" target="_blank">Codeacademy Python course</a></li> 
+ <li><a href="http://learnpython.org/" target="_blank">http://learnpython.org/</a></li> 
+ <li><a href="https://www.wireshark.org/" target="_blank">https://www.wireshark.org/</a></li> 
+ <li><a href="http://linux.die.net/man/1/time" target="_blank">time(1) - Linux man page</a></li> 
+</ul> 
+<p>&nbsp;</p>
+</div></div></td><td class="portlet-content-right"></td></tr><tr><td class="portlet-footer-left"></td><td class="portlet-footer-center"></td><td class="portlet-footer-right"></td></tr></tbody></table></div></div>
+		           <hr class="cleaner">
+		           <div id="footer-container" class="portal-copyright">
+		            <p>
+		            	UPPSALA UNIVERSITET 2015 | Support: <a href="mailto:helpdesk@uu.se">helpdesk@uu.se </a> (student), <a href="mailto:support@ull.uu.se">support@ull.uu.se</a> (employee) | Version: 54.3 <a href="https://studentportalen.uu.se/portal/portal/uusp/help?uusp.portalpage=true&amp;id=UTV">Release Notes</a>
+		            </p>
+		            <div class="rwdButton notPrintable" id="rwdButtonShowWide">Change to full screen</div>
+		            <div id="rwdButtonShowRwd" style="display:none" class="notPrintable">Change to responsiv view </div>
+		            </div>
+		            <div class="bg-city"></div>
+		         </div>
+		      </div>
+		   </div>
+		</div>
+		
+		<script type="text/javascript">
+		jQuery(document).ready(function() {
+			jQuery('#rwdButtonShowWide').click(function() {			
+				showWide();
+			});		
+			jQuery('#rwdButtonShowRwd').click(function() {
+				showRwd();
+			});	
+			
+			jQuery('#loginLink').focus();
+			
+			
+			var wide = localStorage['showWide'];
+			if (wide && wide == "true") {
+				showWide();
+			}
+			
+			function showWide() {
+				jQuery('#rwd_css').remove();
+				jQuery('#rwdButtonShowRwd').addClass('rwdButtonShowRwd');
+				jQuery('#rwdButtonShowRwd').show();	    
+			    localStorage['showWide'] = "true";
+			};
+			
+			function showRwd() {
+				jQuery('head').append('<link rel="stylesheet" id="rwd_css" href="/uusp-webapp/css/uusp_style_rwd.css?v=54.3" type="text/css" media="screen"/>');
+				jQuery('#rwdButtonShowRwd').hide();		    
+			    localStorage['showWide'] = "false";
+			}
+				
+			var title = jQuery('.entityHeader').html() || jQuery('#current a').html() ; 		
+			if (title != undefined) {
+				document.title = title + ', '  + jQuery('title').html();
+			} 	
+			
+			
+			var DarkNavigation = function () {
+			
+			var topNavIcon = jQuery('.central-nav-icon');
+			var topNavWrap = jQuery('.top-nav-dark');
+			
+			var localNavHeader = jQuery('.local-nav-mobile-header');
+			var localNavIcon = jQuery('.local-nav-mobile-icon');
+			var localNavWrap = jQuery('.local-nav-mobile');
+			
+			var init = function () {
+				
+				topNavIcon.click(function () {
+					topNavWrap.slideToggle();
+					topNavIcon.toggleClass('menu-visible');
+				});
+					
+				localNavHeader.click(function () {
+					localNavWrap.slideToggle();
+					localNavIcon.toggleClass('menu-visible');
+				});
+			
+			};
+			
+			return {
+				Init: init
+			};
+			
+			} ();
+			DarkNavigation.Init();
+			  
+		});	
+		
+		
+		
+		</script>
+	</div>
+
+
+</body></html>

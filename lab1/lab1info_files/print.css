@@ -1,0 +1,423 @@
+/* utskriftscss */
+/* Eva Jansson, Uppsala Learning Lab, Uppsala universitet 2006 */
+/* Ake Johansson, informationsavdelningen, Uppsala universitet 2003 */
+/* ref: alistapart.com/articles/goingtoprint */
+html {
+	background:none;
+}
+body {
+	background: white;
+	background-image: none;
+	font-size: 10pt;
+	padding: 0;
+	border: 0;
+	float: none !important;
+	margin-left: 0;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 5%;
+	width: auto;
+	overflow:hidden;
+	}
+#allAroundWrapper, #body {
+	background:none;
+}
+.uu-top-stripe, navigation, div.bg-city {
+   display:none;
+}
+#expander {
+    margin: 0 !important;
+	width: auto;
+}
+  
+div#portal-container {
+	background: white;
+	background-image: none;
+	padding: 0;
+	border: 0;
+	margin-top: 0;
+	margin-right: 0px;
+	margin-bottom: 0;
+	margin-left: 0;
+   }  
+   
+div#content-container {
+	background: white;
+	background-image: none;
+  	margin: 0;
+   	padding: 0;
+   	border: 0;
+   } 
+
+#header-container {
+   display: none;
+   margin: 0px;
+   }  
+
+.functions, .portal-copyright {
+   display: none!important;
+   }
+ 
+#regionA {
+   display: none;
+   }
+   
+    
+TITEL {
+   display: none;
+   }
+   
+hr {
+   display: none!important;
+   }  
+
+#logoName, .logotyp {
+   display: none!important;
+   } 
+
+#uu-top-links a, .shortcuts{
+   display: none;
+   }
+
+#regionB {
+	overflow: visible;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	margin: 0px;
+	width: 100%!important;
+	min-height:500px;
+	} 	
+
+.hide {
+   display: none;
+   }
+
+div.printableOnly{
+    display: block;
+}
+
+.notPrintable {
+    display: none;
+}
+.scroll_checkboxes {
+    display:none;
+}
+/*
+.fixedHeader {
+	display:block !important;
+}
+.fixedHeader table {
+	display:block !important;
+}
+.fixedHeader table thead tr th, .fixedHeader table thead tr {
+	display:none !important;
+	border-color:transparent;
+	color:transparent;
+}*/
+table.dataTable{
+   width:100% !important;
+   }
+
+table { page-break-inside:auto; page-break-after:auto; border: 0; width: 100%;}
+tr    { page-break-inside:auto; page-break-after:auto; border: 0; }
+td    { page-break-inside:auto; page-break-after:auto; }
+thead { display:table-header-group; border: 0; }
+tfoot { display:table-footer-group; }
+column{ page-break-inside:avoid; page-break-after:auto; }
+table.dataTable, .uuspTableProgress, .uuspTable{ page-break-inside:auto; page-break-after:auto;}
+
+.uuspTable, .uuspTableProgress{
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	border:0px solid #FFF!important;
+	}
+	
+.uuspTable th {
+	text-align: left;
+ }
+ 
+.uuspTable td {
+	padding-left:6px!important;
+	padding-top:2px!important;
+	padding-bottom:2px!important;
+	}
+	
+.uuspTableProgress th, 
+.uuspTableProgress td {
+    padding: 0.3em;
+	width:100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+}
+
+.dataTables_filter, dataTable {
+    display: none!important;
+}
+
+.uuspTableGray { 
+	border: 1px solid #999999;
+	}
+	
+.uuspTableGray tr { 
+	border: 1px solid #999999;
+	}	
+
+.portlet-container {
+	border: 0;
+	padding: 0;
+	} 
+	
+.entityInfo a{
+   display: none;
+   } 
+   
+.entityInfo {
+	font-family: Arial, Helvetica, sans-serif;
+   font-size:8pt;
+   }    
+   
+.button {
+   display: none;
+   }   
+   
+SUBMIT {
+   display: none;
+   }
+   
+.print {
+   display: none;
+   }  
+   
+.emptyToolLink {
+   display: none;
+   }  
+	
+a:link, a:visited {
+   color: #990000;
+   background: transparent;
+   text-decoration: underline;
+   } 
+   
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20pt;
+	color: #000000;
+}
+
+h2, .entityHeader, .cipHeader {
+	font-size: 16pt;
+	font-family: Arial, Helvetica, sans-serif; 
+	color: #000000; 
+}
+
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: #000000;
+}
+
+h4, h5, h6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	color: #000000;
+	font-weight: bold;
+}
+
+h3.entityHeader {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+   }
+   
+span.portlet-titlebar-title {
+   display: none;
+}
+
+span.functionHeader {
+	font-size: 12pt;
+	color: #333333;
+	font-weight: bold;
+   }
+	
+p, ul, div {
+	color: black;
+	font-family: Times, Serif;
+	font-size: 11pt;
+	}
+	
+.text {
+	color: black;
+	font-family: Times, Serif;
+	font-size: 11pt;
+	}
+
+font {
+	font-size: 10pt;
+	font-family: Times, Serif;
+	font-variant: normal;
+	font-style: normal;
+	font-stretch: normal;
+	font-size-adjust: none;
+	text-decoration: none;
+}
+
+label {
+	margin-right: 20px;
+ }
+
+
+INPUT {
+	border: 0px;
+	font-size: 11pt;
+    font-family: Times, Serif;
+ }
+ 
+.listMessage {
+	border: 0px;
+	font-size: 10pt;
+	font-family: Times, Serif;
+	font-variant: normal;
+	font-style: normal;
+	font-stretch: normal;
+	font-size-adjust: none;
+	text-decoration: none;
+}
+
+.editableHead>span {
+	display: none;
+}
+	
+pre, code {
+	color: black;
+	font-family: Times, Serif;
+	font-size: 11pt; 
+}
+
+/*--- Evaluation ---*/
+/* Hide all disable text answers when printing (inappropriate answers) */
+.evalContainer .responsesPane .questionResponse .disable{
+	display:none;
+}
+.evaluation .questionAnswer .question,
+.evaluation .takeQuestion .questionHeader {
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    border-top: 1px solid lightgrey;
+}
+
+.diagramTable, .optionLabel, .diagramNode {
+	color: black;
+	font-family: Times, Serif;
+	font-size: 9pt !important;
+	}
+	
+.tundra evalContainer
+ {
+	color: black;
+	font-family: Times, Serif;
+	font-size: 8pt !important;
+	}
+	
+.questionAnswer .diagramTable {
+	color: black;
+	font-family: Times, Serif!important;
+	font-size: 9pt !important;
+	page-break-inside:auto; page-break-after:auto!important;
+	}
+	
+.answerBlock	{ page-break-inside:avoid; page-break-after:auto!important;}
+
+.questionAnswer{ page-break-inside:avoid; page-break-after:auto!important;}
+
+/*--- Groups ---*/
+.inlineEditable {
+	background-image: none;
+}
+
+/*--- Progress ---*/
+.uuspTableProgress { 
+    border-left: 2px solid;
+	page-break-inside:auto; 
+	page-break-after:auto;
+	font-family: Arial, Helvetica, sans-serif!important;
+	font-size: 8pt !important;
+}
+
+.pointsNode, .progressCriteriaText, .uuspTableProgress th > div {
+	font-size: 8pt !important;
+	font-family: Arial, Arial, Helvetica, sans-serif!important;
+	}
+
+.uuspTableProgress th {
+	font-weight: bold;
+	text-align: left;
+	font-size: 8pt !important;
+	font-family: Arial, Arial, Helvetica, sans-serif!important;
+}
+
+.uuspTableProgress .annotation pre {
+    font-family: Arial, Arial, Helvetica, sans-serif!important;
+	font-style: italic;
+	font-size: 8pt !important;
+    white-space: pre-wrap;
+    border: 0 none;
+    padding: 0 0.5em 0 0;
+}
+
+.uuspTableProgress .even, 
+.uuspTableProgress .odd {
+   vertical-align: top;
+   font-size: 8pt !important;
+}
+
+.uuspTableProgress .even > td:first-child,
+.uuspTableProgress .odd > td:first-child {
+    display: none;
+}
+
+.uuspTableProgress a:link, .uuspTableProgress a:visited,
+#allAssignmentsTable a:link, #allAssignmentsTable a:visited {
+   color: black;
+   background: transparent;
+   text-decoration: none;
+ }
+ 
+ #allAssignmentsTable input,  #allAssignmentsTable select {
+  border: 0 none;
+ }
+ 
+ #allAssignmentsTable img {
+    display: none;
+}
+
+.uuspTableProgress span.stateText {
+    font-weight: bold;
+	font-size: 8pt !important;
+	font-family: Arial, Helvetica, sans-serif;	
+}
+
+.save,.cancel,.update,.ok,.delete,.add,.reload,.reset,.next,.send,.search,.addManually,.buttonBorder,.toggleCheckboxButton,.seeAsStudent,.downloadSelected,.logIn,.logOut,.uploadFile,.createMap,.addFromCatalogue,#edit, .showTools, #includeToolsCheckbox {
+display: none !important;
+}
+
+input[type=text],textarea, input[type=number]
+{
+	border:0px solid #FFF!important;
+}
+.progressColumSelector, .progressRowSelector, .rowSelector, .columSelector{
+    display: none;
+}
+
+.viewProgressTable
+{
+	display:inline;
+}
+
+.fixedHeader{
+	display:none;
+}
+.horizontalScroll {
+	overflow:hidden;
+}
