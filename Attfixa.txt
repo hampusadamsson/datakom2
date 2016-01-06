@@ -1,0 +1,19 @@
+if len(raw_data) < 500
+
+* Denna borde vara 516 tror jag. Om ett paket är mindre så är det slut per definition enligt specen för protokollet.
+
+if not data: 
+	break
+else 
+	packet = make_packet_data(next_block, data)
+	s.sendto(packet, sockaddr)
+	nextblock+=1
+
+* Om not data är korrekt ska vi fortfarande skicka ett tomt paket till servern för att visa att vi inte har något mer att skicka. Så gjorde Mathieu i alla fall. Vi ska i princip lägga till de två översta raderna från else-satsen i vår "if not data:"-klausul. 
+
+* Vi borde också testa att skicka det paketet ett antal gånger också (om linan är dålig). Annars kanske vi skickar sista paketet och det inte kommer fram. Då vi inte veta om servern har fått vårt paket. Därför skickar vi typ detta "tomma" paket typ 4-5 gånger för att vara säkra.
+
+
+"You do not have a limit on the number retries. This is important because you will have an infinite loop."
+
+* Jag vet inte riktigt hur jag ska fixa denna men det borde inte vars så svårt att fixa tror jag. Jag tror jag har en idé för detta.
