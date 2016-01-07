@@ -15,9 +15,10 @@ MODE_OCTET=    "octet"
 MODE_MAIL=     "mail"
 
 
-#TFTP_PORT= 69
+#FTP_PORT= 69
 #TFTP_PORT= 13069
-TFTP_PORT= 6969
+TFTP_PORT= 10069
+#TFTP_PORT= 6969
 #TFTP_PORT= 20069
 
 
@@ -119,7 +120,7 @@ def tftp_transfer(fd, hostname, direction):
                     fd.write(data)
                     next_block+=1
                     #---------------------------------------------#
-                    # Denna rad är värdet ändrat från 500 till 516
+                    # Denna rad ar vardet andrat fran 500 till 516
                     #---------------------------------------------#
                     if len(raw_data)<516:
                         break 
@@ -137,7 +138,7 @@ def tftp_transfer(fd, hostname, direction):
                     data = fd.read(BLOCK_SIZE)
                     if not data:
                         #-----------------------------------------------------------------------------------------------#
-                        # På denna rad har jag ändrat så om vi är vid slutet så ska vi fortfarande skicka ett tomt paket. Kommer dock behöva lägga till en retry limit här: typ 20 eller nåt
+                        # Pa denna rad har jag andrat sa om vi ar vid slutet sa ska vi fortfarande skicka ett tomt paket. Kommer dock behova lagga till en retry limit har: typ 20 eller nat
                         #-----------------------------------------------------------------------------------------------#
                         packet = make_packet_data(next_block, data)
                         s.sendto(packet, sockaddr)
