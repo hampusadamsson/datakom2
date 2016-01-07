@@ -15,15 +15,15 @@ MODE_OCTET=    "octet"
 MODE_MAIL=     "mail"
 
 
-#FTP_PORT= 69
-#TFTP_PORT= 13069
-TFTP_PORT= 10069
+#TFTP_PORT= 69
+TFTP_PORT= 13069
+#TFTP_PORT= 10069
 #TFTP_PORT= 6969
 #TFTP_PORT= 20069
 
 
 # Timeout in seconds
-TFTP_TIMEOUT= 2
+TFTP_TIMEOUT= 1
 
 ERROR_CODES = ["Undef",
                "File not found",
@@ -103,6 +103,7 @@ def tftp_transfer(fd, hostname, direction):
     
     # Set a package variable that will increment for each packet sent/received
     next_block = 1
+    retrans_counter = 0 
 
     # Put or get the file, block by block, in a loop.
     while True:
@@ -113,15 +114,13 @@ def tftp_transfer(fd, hostname, direction):
 
             # Get file block by block.
             if parsed[0] == OPCODE_DATA and direction == TFTP_GET:
-                (opcode, block, data) = parsed
+                (opcode, block, data) = parsed                
                 if block==next_block:
+                    retrans_counter = 0
                     ack = make_packet_ack(block)
                     s.sendto(ack, sockaddr) 
                     fd.write(data)
                     next_block+=1
-                    #---------------------------------------------#
-                    # Denna rad ar vardet andrat fran 500 till 516
-                    #---------------------------------------------#
                     if len(raw_data)<516:
                         break 
             
@@ -132,20 +131,19 @@ def tftp_transfer(fd, hostname, direction):
                 break
 
             # Put a file block by block.
-            elif parsed[0] == OPCODE_ACK and direction == TFTP_PUT:
+            elif parsed[0] == OPCODE_ACK and direction == TFTP_PUT:       
                 (opcode, block) = parsed
                 if block==next_block-1:
                     data = fd.read(BLOCK_SIZE)
                     if not data:
-                        #-----------------------------------------------------------------------------------------------#
-                        # Pa denna rad har jag andrat sa om vi ar vid slutet sa ska vi fortfarande skicka ett tomt paket. Kommer dock behova lagga till en retry limit har: typ 20 eller nat
-                        #-----------------------------------------------------------------------------------------------#
                         packet = make_packet_data(next_block, data)
-                        s.sendto(packet, sockaddr)
+                        s.sendto(packet, sockaddr)                        
+                        break
                     else:
+                        retrans_counter=0
                         packet = make_packet_data(next_block, data)
                         s.sendto(packet, sockaddr) 
-                        next_block+=1
+                        next_block+=1                        
 #                else:
 #                    print "wrong block"
 #                    packet = make_packet_data(next_block, data)
@@ -155,7 +153,12 @@ def tftp_transfer(fd, hostname, direction):
         else:
             # The direction is get. Make a new request for the packet. If it is the first packet
             # then send a new request. If not make and send a new ack for the packet.
+            if retrans_counter>5:
+                print "max retrans reached"
+                break
+            
             if direction == TFTP_GET:
+                retrans_counter+=1
                 if next_block==1:
                     s.sendto(make_packet_rrq(fd.name, MODE_OCTET), sockaddr) 
                 else:
@@ -163,12 +166,12 @@ def tftp_transfer(fd, hostname, direction):
                     s.sendto(ack, sockaddr)           
             # If the direction is put. Send the packet again.
             elif direction == TFTP_PUT:
+                retrans_counter+=1
                 if next_block==1:
                     s.sendto(make_packet_wrq(fd.name, MODE_OCTET), sockaddr)
-                else:
+                else:                    
                     s.sendto(packet, sockaddr) 
-            elif direction == TFTP_PUT:                
-                s.sendto(packet, sockaddr) 
+                                
     pass
 
 def usage():
